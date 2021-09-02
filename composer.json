@@ -1,0 +1,17 @@
+{
+    "name": "ip2location/ip2proxy-codeigniter4",
+    "description": "IP2Proxy library for CodeIgniter 4. This module allows user to reverse search of IP address to detect VPN servers, open proxies, web proxies, Tor exit nodes, search engine robots, data center ranges and residential proxies using IP2Proxy BIN database. Other information available includes proxy type, country, state, city, ISP, domain name, usage type, AS number, AS name, threats, last seen date and provider names.",
+    "keywords": ["ip2proxy-bin-database", "geolocation-information", "codeigniter-ip2proxy", "ip-geolocation", "geolocation", "ip-lookup", "ip-address-database", "ip-database","web service", "proxy"],
+    "homepage": "https://www.ip2location.com",
+    "license": "MIT",
+    "authors": [
+        {
+        "name": "IP2Location",
+        "email": "support@ip2location.com",
+        "homepage": "https://www.ip2location.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    }
+}
