@@ -15,14 +15,17 @@ Sample codes are given in this project, under **Controllers** folder. You may ru
 ### BIN Database
 Use following codes in your application for get geolocation information.
 
+```php
     // (optional) Define IP2Proxy database path.
     define('IP2PROXY_DATABASE', '/path/to/ip2proxy/database');
 
     $ipx = new IP2Proxy_lib();
     $countryCode = $ipx->getCountryShort('1.0.241.135');
+```
 
 Below are the methods supported for BIN data file lookup.
 
+```php
     $countryShort = $ipx->getCountryShort($ip);
     $countryLong = $ipx->getCountryLong($ip);
     $region = $ipx->getRegion($ip);
@@ -37,10 +40,12 @@ Below are the methods supported for BIN data file lookup.
     $threat = $ipx->getThreat($ip);
     $provider = $ipx->getProvider($ip);
     $isProxy = $ipx->isProxy($ip);
+```
 
 ### Web Service
 Use following codes in your application for get geolocation information.
 
+```php
     // (required) Define IP2Proxy API key.
     define('IP2PROXY_API_KEY', 'your_api_key');
 
@@ -52,14 +57,29 @@ Use following codes in your application for get geolocation information.
 
     $ipx = new IP2Proxy_lib();
     print_r ($ipx->getWebService('1.0.241.135'));
+```
+
+To use IP2Location.io API for getting the geolocation information, you can use the following code to do so:
+```php
+	// (required) Define IP2Location.io API key.
+    define('IP2LOCATION_IO_API_KEY', 'your_api_key');
+
+    // (optional) Define Translation information. Refer to https://www.ip2location.io/ip2location-documentation for available languages.
+    define('IP2LOCATION_IO_LANGUAGE', 'zh-cn');
+
+    $ipl = new IP2Proxy_lib();
+    print_r ($ipl->getWebService('1.0.241.135'));
+```
 
 ### MySQL Query
 Use following codes in your application for get geolocation information.
 
+```php
     define('IP2PROXY_DATABASE_TABLE', 'ip2proxy_table_name');
 
     $db = model('IP2Proxy_model', false);
     print_r ($db->lookup('1.0.241.135'));
+```
 
 ## Dependencies
 This module requires IP2Proxy BIN data file or IP2Proxy API key to function. You may download the BIN data file at
@@ -67,7 +87,7 @@ This module requires IP2Proxy BIN data file or IP2Proxy API key to function. You
 * IP2Proxy LITE BIN Data (Free): https://lite.ip2location.com
 * IP2Proxy Commercial BIN Data (Comprehensive): https://www.ip2location.com/proxy-database
 
-You can also sign up for [IP2Proxy Web Service](https://www.ip2location.com/web-service/ip2proxy) to get one free API key.
+You can also sign up for [IP2Proxy Web Service](https://www.ip2location.com/web-service/ip2proxy) or [IP2Location.io IP GEOLOCATION API](https://www.ip2location.io/sign-up) to get one free API key.
 
 ## IPv4 BIN vs IPv6 BIN
 * Use the IPv4 BIN file if you just need to query IPv4 addresses.
