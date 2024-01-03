@@ -98,6 +98,7 @@ class IP2Proxy_lib {
 				'key'     => IP2LOCATION_IO_API_KEY,
 				'ip'      => self::getIP($ip),
 				'lang'    => ((defined('IP2LOCATION_IO_LANGUAGE')) ? IP2LOCATION_IO_LANGUAGE : ''),
+				'source'  => 'codeigniter-ipx',
 			];
 			// Remove parameters without values
 			$params = array_filter($params);
