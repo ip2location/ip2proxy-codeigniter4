@@ -82,6 +82,10 @@ class IP2Proxy_lib {
 		return self::$ip2proxy->lookup(self::getIP($ip), \IP2Proxy\Database::PROVIDER);
 	}
 
+	public function getFraudScore($ip=NULL) {
+		return self::$ip2proxy->lookup(self::getIP($ip), \IP2Proxy\Database::FRAUD_SCORE);
+	}
+
 	public function isProxy($ip=NULL) {
 		return self::$ip2proxy->lookup(self::getIP($ip), \IP2Proxy\Database::IS_PROXY);
 	}

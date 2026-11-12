@@ -39,6 +39,7 @@ Below are the methods supported for BIN data file lookup.
     $lastSeen = $ipx->getLastSeen($ip);
     $threat = $ipx->getThreat($ip);
     $provider = $ipx->getProvider($ip);
+    $fraudScore = $ipx->getFraudScore($ip);
     $isProxy = $ipx->isProxy($ip);
 ```
 
